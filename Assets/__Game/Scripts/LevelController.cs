@@ -6,6 +6,7 @@ public class LevelController : MonoBehaviour
 {
     private List<WeaponScript> inventory = new List<WeaponScript>();
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +19,12 @@ public class LevelController : MonoBehaviour
         
     }
 
-    public void changeInventory(string type, float range, float rof, float damage, WeaponControllerScript weapon)
+    public int changeInventory(string type, float range, float rof, float damage, WeaponControllerScript weapon)
     {
         WeaponScript weaponToAdd = new WeaponScript(type, range, rof, damage, weapon);
         Debug.Log(weaponToAdd.getName());
         inventory.Add(weaponToAdd);
+        return getCurrentIndex();
     }
 
     public WeaponScript retrieveInventoryElement(int index) 
@@ -30,8 +32,9 @@ public class LevelController : MonoBehaviour
         return inventory[index];
     }
 
-    public int getInventoryLength()
+    public int getCurrentIndex()
     {
-        return inventory.Count;
+        int currentIndex = inventory.Count - 1;
+        return currentIndex;
     }
 }

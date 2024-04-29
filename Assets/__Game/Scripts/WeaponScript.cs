@@ -33,4 +33,13 @@ public class WeaponScript
     {
         return weapon;
     }
+    public float GetRange()
+    {
+        return weaponRange;
+    }
+    public float GetDamage()
+    {
+        return weaponDamage;
+    }
+
 }
