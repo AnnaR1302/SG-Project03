@@ -64,8 +64,7 @@ public class ShootScript : MonoBehaviour
 
             if (_impactParticle != null)
             {
-                Instantiate(_impactParticle, hitInfo.point,
-                    Quaternion.identity);
+                Instantiate(_impactParticle, hitInfo.point, Quaternion.identity);
             }
             if (_shootSound != null)
             {

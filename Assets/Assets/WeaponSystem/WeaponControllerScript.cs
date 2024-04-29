@@ -9,6 +9,7 @@ public class WeaponControllerScript : MonoBehaviour
     [SerializeField] string weaponName;
     [SerializeField] public float rateOfFire;
     [SerializeField] public float range;
+    //[SerializeField] private AudioClip _shootSound;
     private Mesh weaponMesh;
     LevelController levelController;
     private bool isEquipped = false;
@@ -37,7 +38,7 @@ public class WeaponControllerScript : MonoBehaviour
             listIndex = levelController.changeInventory(weaponName, range, rateOfFire, damage, gameObject.GetComponent<WeaponControllerScript>());
             if (!isEquipped)
             {
-             //   Destroy(gameObject);
+                //Destroy(gameObject);
             }
         }
     }

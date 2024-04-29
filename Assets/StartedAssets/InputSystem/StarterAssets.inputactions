@@ -250,6 +250,28 @@
                 },
                 {
                     "name": "",
+                    "id": "c5d5411b-fbd0-4f6c-aec4-95fda5fc9663",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EquipFirst",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5e7e65e1-d263-4e32-b8e6-db149c8e5429",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EquipFirst",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b10827a1-31ef-4802-917f-afc8397de099",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
