@@ -15,6 +15,7 @@ public class WeaponControllerScript : MonoBehaviour
     private bool isEquipped = false;
     //location of the gun in playerViewport
     [SerializeField] private GameObject gunArm;
+    [SerializeField] private GameObject gunStore;
     int listIndex;
     // Start is called before the first frame update
     void Start()

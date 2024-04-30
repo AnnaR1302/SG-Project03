@@ -7,6 +7,7 @@ public class ShootScript : MonoBehaviour
 {
     LevelController levelController;
     [SerializeField] Transform gunArm;
+    [SerializeField] Transform gunStore;
     WeaponControllerScript activeWeapon;
 
     [SerializeField] private LayerMask _layersToShoot = -1;
@@ -33,6 +34,53 @@ public class ShootScript : MonoBehaviour
                 activeWeapon.gameObject.transform.position = gunArm.gameObject.transform.position;
                 activeWeapon.gameObject.transform.SetParent(gunArm);
             }
+            
+           else
+            {
+                activeWeapon.gameObject.transform.SetParent(null);
+                activeWeapon = levelController.retrieveInventoryElement(0).getObject();
+                activeWeapon.gameObject.transform.position = gunStore.gameObject.transform.position;
+            }
+        }
+    }
+
+    public void OnEquipSecond(InputValue value)
+    {
+        Debug.Log("Check");
+        if (value.isPressed)
+        {
+            if (levelController.retrieveInventoryElement(1) != null)
+            {
+                activeWeapon = levelController.retrieveInventoryElement(1).getObject();
+                activeWeapon.gameObject.transform.position = gunArm.gameObject.transform.position;
+                activeWeapon.gameObject.transform.SetParent(gunArm);
+            }
+            else 
+            {
+                activeWeapon.gameObject.transform.SetParent(null);
+                activeWeapon = levelController.retrieveInventoryElement(1).getObject();
+                activeWeapon.gameObject.transform.position = gunStore.gameObject.transform.position;
+            }
+        }
+    }
+
+    public void OnEquipThird(InputValue value)
+    {
+        Debug.Log("Check");
+        if (value.isPressed)
+        {
+            if (levelController.retrieveInventoryElement(2) != null)
+            {
+                activeWeapon = levelController.retrieveInventoryElement(2).getObject();
+                activeWeapon.gameObject.transform.position = gunArm.gameObject.transform.position;
+                activeWeapon.gameObject.transform.SetParent(gunArm);
+            }
+            else 
+            {
+                activeWeapon.gameObject.transform.SetParent(null);
+                activeWeapon = levelController.retrieveInventoryElement(2).getObject();
+                activeWeapon.gameObject.transform.position = gunStore.gameObject.transform.position;
+            }
         }
     }
 
@@ -45,7 +93,7 @@ public class ShootScript : MonoBehaviour
 
     public void OnShoot(InputValue value)
     {
-        //When LMB shoot weapon. Mandatory message to gonfen: you can do it boyfen believe in you! :)
+        //When LMB shoot weapon
          if (value.isPressed)
         {
             Debug.Log("Shoot");
